@@ -1,0 +1,8 @@
+---
+- name: Probe all hosts
+  hosts: all
+  gather_facts: no
+  tasks:
+    - name: Try shell execution
+      raw: echo hallo
+      ignore_errors: yes
